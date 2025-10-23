@@ -19,7 +19,7 @@ A Java application for automatically downloading and installing themes from GitH
 - Java 17 or higher
 - JavaFX 21+ (included in dependencies)
 - Internet connection for GitHub access
-- Peggle Roguelike Preset Generator installation
+- Peggle Roguelike Generator installation
 
 ## Installation
 

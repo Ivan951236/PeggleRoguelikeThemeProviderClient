@@ -106,7 +106,7 @@ public class ThemeIndexParser {
     }
     
     /**
-     * Parse the present_themes section which has a complex structure
+     * Parse the present_themes section which has a simple structure
      */
     private Map<String, ThemeIndex.ThemeEntry> parseThemeEntries(Map<String, Object> themesMap) {
         Map<String, ThemeIndex.ThemeEntry> result = new HashMap<>();
@@ -117,50 +117,31 @@ public class ThemeIndexParser {
             
             if (value instanceof String) {
                 // Simple case: theme_id: path/to/theme.yml
-                result.put(themeId, new ThemeIndex.ThemeEntry((String) value, null));
+                String themePath = (String) value;
+                result.put(themeId, new ThemeIndex.ThemeEntry(themePath));
             } else if (value instanceof Map) {
-                // Complex case with images_dir
                 @SuppressWarnings("unchecked")
-                Map<String, Object> themeData = (Map<String, Object>) value;
-                
-                String themePath = null;
-                String imagesDir = null;
-                
-                // Look for theme path and images directory
-                for (Map.Entry<String, Object> themeEntry : themeData.entrySet()) {
-                    String key = themeEntry.getKey();
-                    Object val = themeEntry.getValue();
-                    
-                    if ("images_dir".equals(key) && val instanceof String) {
-                        imagesDir = (String) val;
-                    } else if (val instanceof String) {
-                        // Assume the first string value is the theme path
-                        if (themePath == null) {
-                            themePath = (String) val;
-                        }
-                    }
-                }
-                
-                result.put(themeId, new ThemeIndex.ThemeEntry(themePath, imagesDir));
-            }
-        }
-        
-        // Handle the alternative format where theme path is directly under the UUID
-        if (result.isEmpty()) {
-            for (Map.Entry<String, Object> entry : themesMap.entrySet()) {
-                String key = entry.getKey();
-                Object value = entry.getValue();
-                
-                // Check if this might be the theme path directly
-                if (value instanceof String && key.length() == 36 && key.contains("-")) {
-                    // Looks like a UUID, treat the value as theme path
-                    result.put(key, new ThemeIndex.ThemeEntry((String) value, null));
-                }
+                Map<String, Object> obj = (Map<String, Object>) value;
+                String themePath = getFirstString(obj, Arrays.asList("theme_path", "theme", "path"));
+                String markdownPath = getFirstString(obj, Arrays.asList("markdown_path", "markdown", "readme"));
+                ThemeIndex.ThemeEntry themeEntry = new ThemeIndex.ThemeEntry();
+                themeEntry.setThemePath(themePath);
+                themeEntry.setMarkdownPath(markdownPath);
+                // Ignore any legacy images_dir key intentionally
+                result.put(themeId, themeEntry);
             }
         }
         
         logger.debug("Parsed {} theme entries", result.size());
         return result;
+    }
+
+    private String getFirstString(Map<String, Object> map, List<String> keys) {
+        for (String key : keys) {
+            Object v = map.get(key);
+            if (v != null) return v.toString();
+        }
+        return null;
     }
     
     /**

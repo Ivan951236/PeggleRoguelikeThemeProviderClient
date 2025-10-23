@@ -21,6 +21,7 @@ public class ThemeInstaller {
     private final GitHubHandler gitHubHandler;
     private final ThemeIndexParser indexParser;
     private final ExecutorService executorService;
+    private final MarkdownRenderer markdownRenderer;
     
     /**
      * Progress callback for theme installation operations
@@ -59,6 +60,7 @@ public class ThemeInstaller {
         this.gitHubHandler = new GitHubHandler();
         this.indexParser = new ThemeIndexParser();
         this.executorService = Executors.newFixedThreadPool(3);
+        this.markdownRenderer = new MarkdownRenderer();
     }
     
     /**
@@ -260,15 +262,24 @@ public class ThemeInstaller {
             Files.copy(sourceThemePath, destThemePath, StandardCopyOption.REPLACE_EXISTING);
             logger.debug("Copied theme file: {} -> {}", sourceThemePath, destThemePath);
             
-            // Copy images directory if specified
-            if (theme.getImagesDir() != null && !theme.getImagesDir().isEmpty()) {
-                Path sourceImagesDir = providerDir.resolve(theme.getImagesDir());
-                if (Files.exists(sourceImagesDir) && Files.isDirectory(sourceImagesDir)) {
-                    
-                    // Create images directory in customThemes using theme ID
-                    Path destImagesDir = customThemesDir.resolve("images").resolve(themeId);
-                    copyDirectory(sourceImagesDir, destImagesDir);
-                    logger.debug("Copied images directory: {} -> {}", sourceImagesDir, destImagesDir);
+            // Render markdown to HTML if a markdown path is provided (no image dir handling)
+            if (theme.getMarkdownPath() != null && !theme.getMarkdownPath().isEmpty()) {
+                Path markdownPath = providerDir.resolve(theme.getMarkdownPath());
+                if (Files.exists(markdownPath) && Files.isRegularFile(markdownPath)) {
+                    try {
+                        String htmlBody = markdownRenderer.renderFile(markdownPath);
+                        if (htmlBody == null) htmlBody = "";
+                        String title = themeId;
+                        String fullHtml = markdownRenderer.createHtmlDocument(htmlBody, title, configManager.isDarkMode());
+                        String baseName = themeFileName.contains(".") ? themeFileName.substring(0, themeFileName.lastIndexOf('.')) : themeFileName;
+                        Path destHtmlPath = customThemesDir.resolve(baseName + ".html");
+                        Files.writeString(destHtmlPath, fullHtml, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+                        logger.debug("Rendered markdown to HTML: {} -> {}", markdownPath, destHtmlPath);
+                    } catch (Exception e) {
+                        logger.warn("Failed to render markdown for theme {}: {}", themeId, e.getMessage());
+                    }
+                } else {
+                    logger.debug("Markdown file not found for theme {} at {}", themeId, markdownPath);
                 }
             }
             

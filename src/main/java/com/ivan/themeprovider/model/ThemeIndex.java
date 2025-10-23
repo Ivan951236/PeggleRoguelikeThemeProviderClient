@@ -121,26 +121,30 @@ public class ThemeIndex {
      */
     public static class ThemeEntry {
         private String themePath;
-        private String imagesDir;
+        private String markdownPath;
         
         public ThemeEntry() {}
         
-        public ThemeEntry(String themePath, String imagesDir) {
+        public ThemeEntry(String themePath) {
             this.themePath = themePath;
-            this.imagesDir = imagesDir;
+        }
+        
+        public ThemeEntry(String themePath, String markdownPath) {
+            this.themePath = themePath;
+            this.markdownPath = markdownPath;
         }
         
         public String getThemePath() { return themePath; }
         public void setThemePath(String themePath) { this.themePath = themePath; }
         
-        public String getImagesDir() { return imagesDir; }
-        public void setImagesDir(String imagesDir) { this.imagesDir = imagesDir; }
+        public String getMarkdownPath() { return markdownPath; }
+        public void setMarkdownPath(String markdownPath) { this.markdownPath = markdownPath; }
         
         @Override
         public String toString() {
             return "ThemeEntry{" +
                     "themePath='" + themePath + '\'' +
-                    ", imagesDir='" + imagesDir + '\'' +
+                    ", markdownPath='" + markdownPath + '\'' +
                     '}';
         }
     }
