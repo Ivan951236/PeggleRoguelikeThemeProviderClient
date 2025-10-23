@@ -1,12 +1,12 @@
 # Peggle Roguelike Theme Provider Client
 
-A Java application for automatically downloading and installing themes from GitHub repositories for the Peggle Roguelike Generator.
+A Java application for automatically downloading and installing themes from GitHub repositories for the Peggle Roguelike Preset Generator.
 
 ## Features
 
 - **Material Design 3 UI** with dark/light mode support
 - **Automatic theme detection** from GitHub repositories 
-- **Program validation** to ensure correct Peggle Roguelike Generator installation
+- **Program validation** to ensure correct Peggle Roguelike Preset Generator installation
 - **Theme installation** directly to the game's customThemes directory
 - **Configuration management** with YAML-based settings
 - **Pre-installed official theme provider** (Ivan951236/PeggleRoguelikeThemes)
@@ -19,7 +19,7 @@ A Java application for automatically downloading and installing themes from GitH
 - Java 17 or higher
 - JavaFX 21+ (included in dependencies)
 - Internet connection for GitHub access
-- Peggle Roguelike Generator installation
+- Peggle Roguelike Preset Generator installation
 
 ## Installation
 
@@ -56,11 +56,13 @@ Theme providers must include an `index.yml` file with the following structure:
 
 ```yaml
 present_themes:
-  01f5ee5b-d823-4abd-bcb3-d56b1cdc7163: themes\light\gameboy-green-light.yml
-    images_dir: images\01f5ee5b-d823-4abd-bcb3-d56b1cdc7163
-  449b4817-c6e7-480b-bdb4-df44085cdd6d: themes\dark\gameboy-green-dark.yml
-    images_dir: images\449b4817-c6e7-480b-bdb4-df44085cdd6d
- 
+  01f5ee5b-d823-4abd-bcb3-d56b1cdc7163:
+    theme: themes/light/gameboy-green-light.yml
+    markdown: docs/gameboy-green-light.md
+  449b4817-c6e7-480b-bdb4-df44085cdd6d:
+    theme: themes/dark/gameboy-green-dark.yml
+    markdown: docs/gameboy-green-dark.md
+
 theme_provider: official_ivan
 for_program: prpg
 desc: "The Official Theme provider that must be installed by default in clients"
