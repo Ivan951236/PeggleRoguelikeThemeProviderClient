@@ -104,7 +104,7 @@ public class ThemeInstaller {
                 }
                 
                 InstallationResult providerResult = installThemesFromProvider(
-                    provider.getKey(), provider.getValue(), validation.getThemeProvidersDir(),
+                    provider.getKey(), provider.getValue(), configManager.getProvidersRoot(),
                     validation.getCustomThemesDir(), new InstallationProgressCallback() {
                         @Override
                         public void onProgressUpdate(String message, double progress) {
@@ -147,7 +147,7 @@ public class ThemeInstaller {
      * Install themes from a specific theme provider
      */
     public InstallationResult installThemesFromProvider(String providerId, String repositoryName,
-                                                       Path themeProvidersDir, Path customThemesDir,
+                                                       Path providersRootDir, Path customThemesDir,
                                                        InstallationProgressCallback progressCallback) {
         
         try {
@@ -156,7 +156,7 @@ public class ThemeInstaller {
                 progressCallback.onProgressUpdate("Cloning/updating " + repositoryName, 0.1);
             }
             
-            boolean cloneSuccess = gitHubHandler.cloneRepository(repositoryName, themeProvidersDir,
+            boolean cloneSuccess = gitHubHandler.cloneRepository(repositoryName, providersRootDir,
                 new GitHubHandler.ProgressCallback() {
                     @Override
                     public void onProgress(String task, int completed, int total) {
@@ -181,7 +181,7 @@ public class ThemeInstaller {
             
             // Find the cloned repository directory
             String repoName = repositoryName.substring(repositoryName.lastIndexOf('/') + 1);
-            Path providerDir = themeProvidersDir.resolve(repoName);
+            Path providerDir = providersRootDir.resolve(repoName);
             
             if (progressCallback != null) {
                 progressCallback.onProgressUpdate("Parsing theme index", 0.3);
@@ -331,20 +331,22 @@ public class ThemeInstaller {
         }
         
         Map<String, String> themeProviders = configManager.getInstalledThemeProviders();
+        Path providersRoot = configManager.getProvidersRoot();
         
         for (Map.Entry<String, String> provider : themeProviders.entrySet()) {
             String repoName = provider.getValue().substring(provider.getValue().lastIndexOf('/') + 1);
-            Path providerDir = validation.getThemeProvidersDir().resolve(repoName);
+            Path providerDir = providersRoot.resolve(repoName);
             
             if (Files.exists(providerDir)) {
                 ThemeIndex themeIndex = indexParser.parseIndex(providerDir);
                 if (themeIndex != null) {
                     for (Map.Entry<String, ThemeIndex.ThemeEntry> themeEntry : 
                          themeIndex.getPresentThemes().entrySet()) {
-                        
+                        ThemeIndex.ThemeEntry te = themeEntry.getValue();
+                        String displayName = te.getName() != null ? te.getName() : themeEntry.getKey();
                         themes.add(new ThemeInfo(
                             themeEntry.getKey(),
-                            themeEntry.getValue().getThemePath(),
+                            displayName,
                             provider.getKey(),
                             themeIndex.isCertifiedByIvan(),
                             themeIndex.isOfficial(),
@@ -356,6 +358,71 @@ public class ThemeInstaller {
         }
         
         return themes;
+    }
+
+    /** Provider metadata for UI selection */
+    public static class ProviderInfo {
+        private final String id;              // providerId from config map key
+        private final String repository;      // username/repo
+        private final Path providerDir;       // themeProviders/<repo>
+        private final ThemeIndex index;       // parsed index.yml
+        
+        public ProviderInfo(String id, String repository, Path providerDir, ThemeIndex index) {
+            this.id = id;
+            this.repository = repository;
+            this.providerDir = providerDir;
+            this.index = index;
+        }
+        public String getId() { return id; }
+        public String getRepository() { return repository; }
+        public Path getProviderDir() { return providerDir; }
+        public ThemeIndex getIndex() { return index; }
+        public Path getIconPath() { return index.getIcon() != null ? providerDir.resolve(index.getIcon()) : null; }
+        public Path getHomepagePath() { return index.getHomepage() != null ? providerDir.resolve(index.getHomepage()) : null; }
+        public String getDisplayName() { return index.getName() != null ? index.getName() : id; }
+    }
+
+    /** List available providers with parsed indexes */
+    public List<ProviderInfo> getAvailableProviders() {
+        List<ProviderInfo> providers = new ArrayList<>();
+        String programDir = configManager.getSelectedProgramDir();
+        if (programDir.isEmpty()) return providers;
+        Path programPath = Paths.get(programDir);
+        ProgramValidator.ValidationResult validation = ProgramValidator.validateProgramDirectory(programPath);
+        if (!validation.isValid()) return providers;
+        Map<String, String> themeProviders = configManager.getInstalledThemeProviders();
+        Path providersRoot = configManager.getProvidersRoot();
+        for (Map.Entry<String, String> entry : themeProviders.entrySet()) {
+            String providerId = entry.getKey();
+            String repoName = entry.getValue().substring(entry.getValue().lastIndexOf('/') + 1);
+            Path providerDir = providersRoot.resolve(repoName);
+            if (!Files.exists(providerDir)) continue;
+            ThemeIndex index = indexParser.parseIndex(providerDir);
+            if (index != null) {
+                providers.add(new ProviderInfo(providerId, entry.getValue(), providerDir, index));
+            }
+        }
+        return providers;
+    }
+
+    /** Install a single theme by provider and theme id */
+    public boolean installTheme(String providerId, String themeId) {
+        String programDir = configManager.getSelectedProgramDir();
+        if (programDir.isEmpty()) return false;
+        Path programPath = Paths.get(programDir);
+        ProgramValidator.ValidationResult validation = ProgramValidator.validateProgramDirectory(programPath);
+        if (!validation.isValid()) return false;
+        Map<String, String> themeProviders = configManager.getInstalledThemeProviders();
+        String repository = themeProviders.get(providerId);
+        if (repository == null) return false;
+        String repoName = repository.substring(repository.lastIndexOf('/') + 1);
+        Path providerDir = configManager.getProvidersRoot().resolve(repoName);
+        if (!Files.exists(providerDir)) return false;
+        ThemeIndex themeIndex = indexParser.parseIndex(providerDir);
+        if (themeIndex == null) return false;
+        ThemeIndex.ThemeEntry theme = themeIndex.getPresentThemes().get(themeId);
+        if (theme == null) return false;
+        return installSingleTheme(themeId, theme, providerDir, validation.getCustomThemesDir());
     }
     
     /**
@@ -392,5 +459,23 @@ public class ThemeInstaller {
      */
     public void shutdown() {
         executorService.shutdown();
+    }
+
+    /** Update all configured providers (git pull if exists, else clone). */
+    public boolean updateAllProviders(GitHubHandler.ProgressCallback progressCallback) {
+        Map<String, String> themeProviders = configManager.getInstalledThemeProviders();
+        Path providersRoot = configManager.getProvidersRoot();
+        boolean allOk = true;
+        for (Map.Entry<String, String> entry : themeProviders.entrySet()) {
+            String repo = entry.getValue();
+            try {
+                boolean ok = gitHubHandler.cloneRepository(repo, providersRoot, progressCallback);
+                allOk &= ok;
+            } catch (Exception e) {
+                logger.error("Update failed for {}", repo, e);
+                allOk = false;
+            }
+        }
+        return allOk;
     }
 }

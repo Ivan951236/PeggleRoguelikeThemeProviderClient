@@ -1,0 +1,218 @@
+2025-10-24 13:21:31.541 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client starting...
+2025-10-24 13:21:31.542 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Java version: 21.0.8
+2025-10-24 13:21:31.544 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - JavaFX version: 23.0.4
+2025-10-24 13:21:31.544 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - OS: Windows 10 10.0
+2025-10-24 13:21:31.547 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Initializing Theme Provider Client...
+2025-10-24 13:21:31.586 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ConfigManager - Created default configuration
+2025-10-24 13:21:31.606 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:21:31.606 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ConfigManager - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:21:31.607 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:21:31.622 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Starting Theme Provider Client UI...
+2025-10-24 13:21:32.646 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client started successfully
+2025-10-24 13:21:34.728 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:21:35.330 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:21:46.471 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:21:46.471 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:21:46.471 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:21:46.471 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:21:46.473 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:21:46.474 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:21:46.474 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:21:46.474 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:21:46.474 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:21:54.529 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:22:04.021 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:22:05.573 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Shutting down Theme Provider Client...
+2025-10-24 13:22:05.575 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:22:05.576 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client shutdown complete
+2025-10-24 13:23:57.158 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client starting...
+2025-10-24 13:23:57.159 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Java version: 21.0.8
+2025-10-24 13:23:57.160 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - JavaFX version: 23.0.4
+2025-10-24 13:23:57.161 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - OS: Windows 10 10.0
+2025-10-24 13:23:57.165 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Initializing Theme Provider Client...
+2025-10-24 13:23:57.227 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ConfigManager - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:23:57.228 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:23:57.242 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Starting Theme Provider Client UI...
+2025-10-24 13:23:57.885 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:23:57.886 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:23:57.886 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:23:57.886 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:23:57.894 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:23:58.639 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client started successfully
+2025-10-24 13:24:06.039 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:24:07.021 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:24:21.870 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:24:21.871 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:24:21.871 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:24:21.871 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:24:21.875 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:24:25.880 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:24:25.880 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:24:25.881 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:24:25.881 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:24:25.884 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:24:46.378 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:24:46.378 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:24:46.378 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:24:46.378 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:24:46.382 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:24:57.360 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Shutting down Theme Provider Client...
+2025-10-24 13:24:57.365 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:24:57.365 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client shutdown complete
+2025-10-24 13:27:00.420 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client starting...
+2025-10-24 13:27:00.422 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Java version: 21.0.8
+2025-10-24 13:27:00.423 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - JavaFX version: 23.0.4
+2025-10-24 13:27:00.423 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - OS: Windows 10 10.0
+2025-10-24 13:27:00.427 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Initializing Theme Provider Client...
+2025-10-24 13:27:00.485 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ConfigManager - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:27:00.486 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:27:00.501 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Starting Theme Provider Client UI...
+2025-10-24 13:27:01.147 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:27:01.147 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:27:01.147 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:27:01.147 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:27:01.157 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:27:01.798 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client started successfully
+2025-10-24 13:27:08.352 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Shutting down Theme Provider Client...
+2025-10-24 13:27:08.368 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:27:08.368 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client shutdown complete
+2025-10-24 13:28:25.315 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client starting...
+2025-10-24 13:28:25.317 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Java version: 21.0.8
+2025-10-24 13:28:25.318 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - JavaFX version: 23.0.4
+2025-10-24 13:28:25.319 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - OS: Windows 10 10.0
+2025-10-24 13:28:25.322 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Initializing Theme Provider Client...
+2025-10-24 13:28:25.386 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ConfigManager - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:28:25.386 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:28:25.400 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Starting Theme Provider Client UI...
+2025-10-24 13:28:26.019 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:28:26.020 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:28:26.020 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:28:26.020 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:28:26.029 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:28:26.720 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client started successfully
+2025-10-24 13:28:31.479 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Shutting down Theme Provider Client...
+2025-10-24 13:28:31.494 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:28:31.494 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client shutdown complete
+2025-10-24 13:29:50.830 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client starting...
+2025-10-24 13:29:50.831 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Java version: 21.0.8
+2025-10-24 13:29:50.833 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - JavaFX version: 23.0.4
+2025-10-24 13:29:50.833 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - OS: Windows 10 10.0
+2025-10-24 13:29:50.836 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Initializing Theme Provider Client...
+2025-10-24 13:29:50.899 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ConfigManager - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:29:50.899 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:29:50.914 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Starting Theme Provider Client UI...
+2025-10-24 13:29:51.579 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:29:51.579 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:29:51.579 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:29:51.579 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:29:51.588 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:29:52.212 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client started successfully
+2025-10-24 13:29:59.974 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Shutting down Theme Provider Client...
+2025-10-24 13:29:59.987 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:29:59.988 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client shutdown complete
+2025-10-24 13:32:04.942 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client starting...
+2025-10-24 13:32:04.943 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Java version: 21.0.8
+2025-10-24 13:32:04.945 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - JavaFX version: 23.0.4
+2025-10-24 13:32:04.945 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - OS: Windows 10 10.0
+2025-10-24 13:32:04.949 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Initializing Theme Provider Client...
+2025-10-24 13:32:05.012 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ConfigManager - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:32:05.012 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:32:05.027 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Starting Theme Provider Client UI...
+2025-10-24 13:32:05.741 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:32:05.741 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:32:05.741 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:32:05.741 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:32:05.750 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:32:06.395 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client started successfully
+2025-10-24 13:32:21.708 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Shutting down Theme Provider Client...
+2025-10-24 13:32:21.723 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:32:21.723 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client shutdown complete
+2025-10-24 13:37:01.599 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client starting...
+2025-10-24 13:37:01.601 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Java version: 21.0.8
+2025-10-24 13:37:01.602 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - JavaFX version: 23.0.4
+2025-10-24 13:37:01.602 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - OS: Windows 10 10.0
+2025-10-24 13:37:01.608 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Initializing Theme Provider Client...
+2025-10-24 13:37:01.668 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ConfigManager - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:37:01.669 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:37:01.683 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Starting Theme Provider Client UI...
+2025-10-24 13:37:02.300 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:37:02.300 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:37:02.300 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:37:02.301 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:37:02.310 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:37:02.959 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client started successfully
+2025-10-24 13:37:19.034 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:37:19.035 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:37:19.035 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:37:19.035 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:37:19.039 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:37:32.566 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:37:32.566 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:37:32.566 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:37:32.566 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:37:32.570 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:37:33.956 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Shutting down Theme Provider Client...
+2025-10-24 13:37:33.970 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:37:33.971 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client shutdown complete
+2025-10-24 13:39:02.748 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client starting...
+2025-10-24 13:39:02.750 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Java version: 21.0.8
+2025-10-24 13:39:02.751 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - JavaFX version: 23.0.4
+2025-10-24 13:39:02.751 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - OS: Windows 10 10.0
+2025-10-24 13:39:02.755 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Initializing Theme Provider Client...
+2025-10-24 13:39:02.817 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ConfigManager - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:39:02.817 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:39:02.832 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Starting Theme Provider Client UI...
+2025-10-24 13:39:03.460 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:39:03.460 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:39:03.460 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:39:03.460 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:39:03.469 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:39:04.217 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client started successfully
+2025-10-24 13:39:17.197 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:39:17.198 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:39:17.198 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:39:17.198 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:39:17.202 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:39:19.167 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Shutting down Theme Provider Client...
+2025-10-24 13:39:19.182 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:39:19.182 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client shutdown complete
+2025-10-24 13:41:34.539 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client starting...
+2025-10-24 13:41:34.540 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - Java version: 21.0.8
+2025-10-24 13:41:34.542 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - JavaFX version: 23.0.4
+2025-10-24 13:41:34.542 [main] INFO  com.ivan.themeprovider.ThemeProviderClient - OS: Windows 10 10.0
+2025-10-24 13:41:34.544 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Initializing Theme Provider Client...
+2025-10-24 13:41:34.605 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ConfigManager - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:41:34.605 [JavaFX-Launcher] INFO  com.ivan.themeprovider.ThemeProviderClient - Configuration loaded from: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:41:34.620 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Starting Theme Provider Client UI...
+2025-10-24 13:41:35.427 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:41:35.427 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:41:35.428 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:41:35.428 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:41:35.438 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:41:36.148 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client started successfully
+2025-10-24 13:41:46.132 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:41:46.133 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:41:46.133 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:41:46.133 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:41:46.137 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:41:52.503 [Thread-5] INFO  com.ivan.themeprovider.GitHubHandler - Repository directory already exists, attempting to update: C:\ProgramData\.theme_provider_client\themeProviders\PeggleRoguelikeThemes
+2025-10-24 13:41:52.504 [Thread-5] INFO  com.ivan.themeprovider.GitHubHandler - Updating repository: C:\ProgramData\.theme_provider_client\themeProviders\PeggleRoguelikeThemes
+2025-10-24 13:41:56.845 [Thread-5] INFO  com.ivan.themeprovider.GitHubHandler - Successfully updated repository: C:\ProgramData\.theme_provider_client\themeProviders\PeggleRoguelikeThemes
+2025-10-24 13:41:58.693 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:41:58.693 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:41:58.693 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:41:58.693 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:41:58.701 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:42:04.457 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:42:04.457 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:42:04.457 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:42:04.457 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:42:04.461 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:42:09.016 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Program directory validation successful: E:\java-production\prpg-ivans-origin
+2025-10-24 13:42:09.017 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - Found JAR: peggle-roguelike-generator-1.0.0.jar
+2025-10-24 13:42:09.017 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - CustomThemes directory: E:\java-production\prpg-ivans-origin\customThemes
+2025-10-24 13:42:09.017 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ProgramValidator - ThemeProviders directory: E:\java-production\prpg-ivans-origin\themeProviders
+2025-10-24 13:42:09.020 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeIndexParser - Successfully parsed index.yml: ThemeIndex{themeProvider='official_ivan', forProgram='prpg', desc='The Official Theme provider that must be installed by default in clients', certifiedByIvan=true, themeProviderType='official', themes=4}
+2025-10-24 13:42:32.310 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Shutting down Theme Provider Client...
+2025-10-24 13:42:32.324 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ConfigManager - Configuration saved to: C:\ProgramData\.theme_provider_client\theme_provider_config.yml
+2025-10-24 13:42:32.324 [JavaFX Application Thread] INFO  com.ivan.themeprovider.ThemeProviderClient - Theme Provider Client shutdown complete

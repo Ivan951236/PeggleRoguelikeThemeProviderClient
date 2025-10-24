@@ -1,0 +1,27 @@
+# Blue Forest sample provider index.yml
+name: Blue Forest Themes
+theme_provider: blue_forest
+for_program: prpg
+desc: "Nature-inspired light/dark themes"
+certified_by_ivan: false
+theme_format: yml
+date_created: 24/10/2025
+theme_provider_type: community
+tags: "nature, calming, prpg"
+icon: assets/icon.png
+homepage: homepage.md
+
+present_themes:
+  3a9a2e5c-4d6b-4b1c-9b1b-9a2e5c4d6b4b:
+    name: Blue Sky Light
+    category: light
+    theme: themes/light/blue-sky-light.yml
+    markdown: themes/light/blue-sky-light.md
+    theme_tags: ["blue", "sky", "light"]
+
+  b7c1d9e2-8f3a-4c6d-9e1b-2a3c4d5e6f7a:
+    name: Forest Green Dark
+    category: dark
+    theme: themes/dark/forest-green-dark.yml
+    markdown: themes/dark/forest-green-dark.md
+    theme_tags: ["green", "forest", "dark"]

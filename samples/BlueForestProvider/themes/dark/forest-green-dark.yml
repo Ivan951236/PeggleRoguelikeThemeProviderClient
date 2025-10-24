@@ -1,0 +1,9 @@
+name: Forest Green Dark
+mode: dark
+primary: "#10B981"
+onPrimary: "#000000"
+background: "#0B1210"
+onBackground: "#D1FAE5"
+surface: "#0B1210"
+onSurface: "#D1FAE5"
+outline: "#065F46"

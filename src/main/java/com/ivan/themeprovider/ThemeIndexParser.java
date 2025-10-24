@@ -83,7 +83,10 @@ public class ThemeIndexParser {
             themeIndex.setThemeFormat(getStringValue(data, "theme_format"));
             themeIndex.setDateCreated(getStringValue(data, "date_created"));
             themeIndex.setThemeProviderType(getStringValue(data, "theme_provider_type"));
-            themeIndex.setTags(getStringValue(data, "tags"));
+            themeIndex.setTags(getStringValue(data, "tags")); // provider-level tags
+            themeIndex.setName(getStringValue(data, "name"));
+            themeIndex.setIcon(getStringValue(data, "icon"));
+            themeIndex.setHomepage(getStringValue(data, "homepage"));
             
             // Parse boolean field
             Object certifiedObj = data.get("certified_by_ivan");
@@ -124,9 +127,15 @@ public class ThemeIndexParser {
                 Map<String, Object> obj = (Map<String, Object>) value;
                 String themePath = getFirstString(obj, Arrays.asList("theme_path", "theme", "path"));
                 String markdownPath = getFirstString(obj, Arrays.asList("markdown_path", "markdown", "readme"));
+                String name = getFirstString(obj, Arrays.asList("name", "title"));
+                String category = getFirstString(obj, Arrays.asList("category", "type"));
+                List<String> themeTags = parseTags(obj.get("theme_tags"));
                 ThemeIndex.ThemeEntry themeEntry = new ThemeIndex.ThemeEntry();
                 themeEntry.setThemePath(themePath);
                 themeEntry.setMarkdownPath(markdownPath);
+                themeEntry.setName(name);
+                themeEntry.setCategory(category);
+                themeEntry.setThemeTags(themeTags);
                 // Ignore any legacy images_dir key intentionally
                 result.put(themeId, themeEntry);
             }
@@ -142,6 +151,21 @@ public class ThemeIndexParser {
             if (v != null) return v.toString();
         }
         return null;
+    }
+
+    private List<String> parseTags(Object value) {
+        if (value == null) return Collections.emptyList();
+        if (value instanceof List) {
+            @SuppressWarnings("unchecked")
+            List<Object> raw = (List<Object>) value;
+            List<String> out = new ArrayList<>();
+            for (Object o : raw) if (o != null) out.add(o.toString());
+            return out;
+        }
+        // Comma-separated string
+        String s = value.toString();
+        if (s.trim().isEmpty()) return Collections.emptyList();
+        return Arrays.asList(s.split("\\s*,\\s*"));
     }
     
     /**

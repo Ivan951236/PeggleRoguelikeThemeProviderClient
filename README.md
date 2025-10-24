@@ -1,12 +1,12 @@
 # Peggle Roguelike Theme Provider Client
 
-A Java application for automatically downloading and installing themes from GitHub repositories for the Peggle Roguelike Preset Generator.
+A Java application for automatically downloading and installing themes from GitHub repositories for the Peggle Roguelike Generator.
 
 ## Features
 
 - **Material Design 3 UI** with dark/light mode support
 - **Automatic theme detection** from GitHub repositories 
-- **Program validation** to ensure correct Peggle Roguelike Preset Generator installation
+- **Program validation** to ensure correct Peggle Roguelike Generator installation
 - **Theme installation** directly to the game's customThemes directory
 - **Configuration management** with YAML-based settings
 - **Pre-installed official theme provider** (Ivan951236/PeggleRoguelikeThemes)
@@ -19,7 +19,7 @@ A Java application for automatically downloading and installing themes from GitH
 - Java 17 or higher
 - JavaFX 21+ (included in dependencies)
 - Internet connection for GitHub access
-- Peggle Roguelike Preset Generator installation
+- Peggle Roguelike Generator installation
 
 ## Installation
 
@@ -39,11 +39,12 @@ A Java application for automatically downloading and installing themes from GitH
 1. Launch the application
 2. Select your Peggle Roguelike Generator directory (containing `peggle-roguelike-generator*.jar`)
 3. The app will automatically create missing directories (`customThemes`, `themeProviders`)
+4. You will see the Theme Provider selection screen (with icons and names). Click a provider to view its homepage.
 
 ### Installing Themes
-1. Click "Install All Themes" to download from all configured providers
-2. Progress is shown in real-time with detailed logging
-3. Themes are automatically copied to the game's `customThemes` directory
+- From a provider homepage, click "All Themes" to open the catalog.
+- Click a theme to view its details; the description is rendered from the theme's markdown file.
+- Use the "Install" button (top-right) to install just that theme to `customThemes`.
 
 ### Adding Theme Providers
 1. Click "Add Provider" button
@@ -52,26 +53,44 @@ A Java application for automatically downloading and installing themes from GitH
 
 ### Theme Provider Requirements
 
-Theme providers must include an `index.yml` file with the following structure:
+Theme providers must include an `index.yml` file with the following structure (updated):
 
 ```yaml
-present_themes:
-  01f5ee5b-d823-4abd-bcb3-d56b1cdc7163:
-    theme: themes/light/gameboy-green-light.yml
-    markdown: docs/gameboy-green-light.md
-  449b4817-c6e7-480b-bdb4-df44085cdd6d:
-    theme: themes/dark/gameboy-green-dark.yml
-    markdown: docs/gameboy-green-dark.md
-
-theme_provider: official_ivan
-for_program: prpg
-desc: "The Official Theme provider that must be installed by default in clients"
-certified_by_ivan: true
+# Provider metadata (required)
+name: Blue Forest Themes              # Friendly provider name (REQUIRED)
+theme_provider: blue_forest          # Provider ID (unique)
+for_program: prpg                    # Target program ID
+desc: "Nature-inspired light/dark themes"
+certified_by_ivan: false             # or true
 theme_format: yml
-date_created: 23/10/2025
-theme_provider_type: official
-tags: "nsfw_images_allowed, moonandsun, official, prpg"
+date_created: 24/10/2025
+theme_provider_type: community       # official | community
+tags: "nature, calming, prpg"        # Provider-level tags (not per-theme)
+icon: assets/icon.png                # PNG/JPG/WEBP/GIF supported
+homepage: homepage.md                # Provider homepage markdown file
+
+# Catalog of themes (REQUIRED)
+present_themes:
+  3a9a2e5c-4d6b-4b1c-9b1b-9a2e5c4d6b4b:
+    name: Blue Sky Light
+    category: light                   # dark | light | other
+    theme: themes/light/blue-sky-light.yml
+    markdown: themes/light/blue-sky-light.md
+    theme_tags: ["blue", "sky", "light"]
+
+  b7c1d9e2-8f3a-4c6d-9e1b-2a3c4d5e6f7a:
+    name: Forest Green Dark
+    category: dark
+    theme: themes/dark/forest-green-dark.yml
+    markdown: themes/dark/forest-green-dark.md
+    theme_tags: ["green", "forest", "dark"]
 ```
+
+Notes:
+- images_dir is no longer used; use markdown files for descriptions and relative assets.
+- The provider homepage must be a markdown file referenced by `homepage`.
+- Icons can be PNG/JPG/GIF/WEBP; WEBP is supported via embedded WebView.
+- Per-theme tags are in `theme_tags`; provider-level `tags` apply to the provider only.
 
 ## Configuration
 
@@ -104,15 +123,22 @@ auto_update_themes: true
 ```
 PeggleRoguelikeDirectory/
 ├── peggle-roguelike-generator.jar
-├── customThemes/           # Game themes installed here
-│   ├── theme1.yml
-│   ├── theme2.yml
-│   └── images/
-└── themeProviders/         # Cloned repositories
-    └── PeggleRoguelikeThemes/
-        ├── index.yml
-        ├── themes/
-        └── images/
+├── customThemes/                    # Game themes installed here
+│   ├── <theme>.yml                  # Copied theme files
+│   └── <theme>.html                 # Auto-generated HTML from theme markdown (for preview)
+└── themeProviders/                  # Cloned repositories (GitHub)
+    └── <RepoName>/
+        ├── index.yml                # Uses updated structure (see above)
+        ├── homepage.md              # Provider homepage markdown
+        ├── assets/
+        │   └── icon.png             # Provider icon (png/jpg/webp/gif)
+        └── themes/
+            ├── light/
+            │   ├── blue-sky-light.yml
+            │   └── blue-sky-light.md
+            └── dark/
+                ├── forest-green-dark.yml
+                └── forest-green-dark.md
 ```
 
 ## Development

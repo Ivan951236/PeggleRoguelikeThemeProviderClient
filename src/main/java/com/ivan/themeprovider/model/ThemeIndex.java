@@ -17,7 +17,12 @@ public class ThemeIndex {
     private String themeFormat;
     private String dateCreated;
     private String themeProviderType;
-    private String tags;
+    private String tags; // Provider-level tags
+
+    // New provider metadata
+    private String name;     // Friendly provider name (required)
+    private String icon;     // Path to icon file (png/jpg/webp/gif)
+    private String homepage; // Path to provider homepage markdown file
     
     // Getters and setters
     public Map<String, ThemeEntry> getPresentThemes() { return presentThemes; }
@@ -46,6 +51,15 @@ public class ThemeIndex {
     
     public String getTags() { return tags; }
     public void setTags(String tags) { this.tags = tags; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getIcon() { return icon; }
+    public void setIcon(String icon) { this.icon = icon; }
+
+    public String getHomepage() { return homepage; }
+    public void setHomepage(String homepage) { this.homepage = homepage; }
     
     /**
      * Check if this is an official theme provider
@@ -122,6 +136,10 @@ public class ThemeIndex {
     public static class ThemeEntry {
         private String themePath;
         private String markdownPath;
+        // New per-theme metadata
+        private String name;       // Human-friendly theme name
+        private String category;   // e.g., dark or light
+        private List<String> themeTags = new ArrayList<>(); // theme_tags
         
         public ThemeEntry() {}
         
@@ -140,11 +158,23 @@ public class ThemeIndex {
         public String getMarkdownPath() { return markdownPath; }
         public void setMarkdownPath(String markdownPath) { this.markdownPath = markdownPath; }
         
+        public String getName() { return name; }
+        public void setName(String name) { this.name = name; }
+        
+        public String getCategory() { return category; }
+        public void setCategory(String category) { this.category = category; }
+        
+        public List<String> getThemeTags() { return themeTags; }
+        public void setThemeTags(List<String> themeTags) { this.themeTags = themeTags != null ? themeTags : new ArrayList<>(); }
+        
         @Override
         public String toString() {
             return "ThemeEntry{" +
                     "themePath='" + themePath + '\'' +
                     ", markdownPath='" + markdownPath + '\'' +
+                    ", name='" + name + '\'' +
+                    ", category='" + category + '\'' +
+                    ", themeTags=" + themeTags +
                     '}';
         }
     }

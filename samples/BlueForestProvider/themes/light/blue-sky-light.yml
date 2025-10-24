@@ -1,0 +1,9 @@
+name: Blue Sky Light
+mode: light
+primary: "#3B82F6"
+onPrimary: "#FFFFFF"
+background: "#F5FAFF"
+onBackground: "#0F172A"
+surface: "#FFFFFF"
+onSurface: "#0F172A"
+outline: "#93C5FD"

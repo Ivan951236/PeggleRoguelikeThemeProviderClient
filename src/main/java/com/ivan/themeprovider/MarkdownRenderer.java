@@ -99,7 +99,15 @@ public class MarkdownRenderer {
      * @return Complete HTML document
      */
     public String createHtmlDocument(String htmlContent, String title, boolean darkMode) {
+        return createHtmlDocument(htmlContent, title, darkMode, null);
+    }
+
+    /**
+     * Create a complete HTML document with optional base href for resolving relative assets
+     */
+    public String createHtmlDocument(String htmlContent, String title, boolean darkMode, Path baseDir) {
         String cssStyles = getCssStyles(darkMode);
+        String baseTag = baseDir != null ? "<base href=\"" + baseDir.toUri().toString() + "\">" : "";
         
         return """
             <!DOCTYPE html>
@@ -108,6 +116,7 @@ public class MarkdownRenderer {
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>%s</title>
+                %s
                 <style>%s</style>
             </head>
             <body>
@@ -116,7 +125,7 @@ public class MarkdownRenderer {
                 </div>
             </body>
             </html>
-            """.formatted(title, cssStyles, htmlContent);
+            """.formatted(title, baseTag, cssStyles, htmlContent);
     }
     
     /**

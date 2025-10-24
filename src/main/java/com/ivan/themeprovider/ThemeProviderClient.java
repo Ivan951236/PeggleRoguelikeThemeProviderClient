@@ -23,6 +23,8 @@ public class ThemeProviderClient extends Application {
         
         // Initialize configuration manager
         configManager = new ConfigManager();
+        // Expose base dir for logback configuration
+        System.setProperty("themeClient.baseDir", configManager.getBaseDir().toString());
         
         logger.info("Configuration loaded from: {}", configManager.getConfigPath());
     }
